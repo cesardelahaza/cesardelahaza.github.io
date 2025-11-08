@@ -1,0 +1,139 @@
+:root {
+    --bg-color-light: white;
+    --text-color-light: #F5F5F5;
+    --bg-color-dark: #303030;
+    --text-color-dark: #303030;
+
+    /* Variables “activas” */
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-dark);
+    --icon-color: var(--text-color-dark); /* para SVG */
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+svg {
+    fill: var(--icon-color);
+    transition: 0.3s;
+}
+
+#dayIcon {
+    display: none;
+}
+
+#nightIcon {
+    display: inline;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+}
+
+a:visited {
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+nav{
+    position: relative;
+    z-index: 9;
+    &.navBar {
+        margin: 0 auto;
+        display: block;
+        padding: 10px 0 0 0;  
+        text-align: center;
+        font-size: 16px;
+        ul li {
+            list-style: none;
+            margin: 0 auto;
+            /*border-left: 2px solid #3ca0e7;*/
+            display: inline-block;
+            padding: 0 20px;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            font-family: arvo;
+        }
+        li span {
+            color: var(--text-color);
+        }
+        li span:hover {
+            color: #3ca0e7;
+        }
+        li:hover {
+            cursor: pointer;
+        }
+  }
+}
+
+.navBar span {
+    text-decoration: none;
+    &:hover {
+        color: #3CA0E7;
+    }
+}
+
+.contact .contactText {
+    visibility: hidden;
+    background-color: var(--icon-color);
+    color: var(--bg-color);
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 1px;
+    z-index: 1;
+    bottom: 125%;
+}
+
+.contactText {
+    position: absolute;
+}
+
+.contactArrow {
+    visibility: hidden;
+    position: absolute;
+}
+
+.contact:hover .contactArrow {
+    visibility: visible;
+    margin-top: -20px;
+    margin-left: -20px;
+    animation: fadeIn 0.3s;
+}
+
+.contact:hover .contactText {
+    visibility: visible;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
