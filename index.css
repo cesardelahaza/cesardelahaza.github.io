@@ -7,7 +7,8 @@
     /* Variables “activas” */
     --bg-color: var(--bg-color-light);
     --text-color: var(--text-color-dark);
-    --icon-color: var(--text-color-dark); /* para SVG */
+    --icon-color: var(--text-color-dark);
+    /* para SVG */
 }
 
 html {
@@ -50,22 +51,17 @@ a:visited {
     color: rgb(49, 49, 49);
 }
 
-footer {
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-}
-
-nav{
+nav {
     position: relative;
     z-index: 9;
+
     &.navBar {
         margin: 0 auto;
         display: block;
-        padding: 10px 0 0 0;  
+        padding: 10px 0 0 0;
         text-align: center;
         font-size: 16px;
+
         ul li {
             list-style: none;
             margin: 0 auto;
@@ -77,23 +73,34 @@ nav{
             text-align: center;
             font-family: arvo;
         }
+
         li span {
             color: var(--text-color);
         }
+
         li span:hover {
             color: #3ca0e7;
         }
+
         li:hover {
             cursor: pointer;
         }
-  }
+    }
 }
 
 .navBar span {
     text-decoration: none;
+
     &:hover {
         color: #3CA0E7;
     }
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
 }
 
 .contact .contactText {
@@ -114,6 +121,8 @@ nav{
 .contactArrow {
     visibility: hidden;
     position: absolute;
+    margin-top: -20px;
+    margin-left: -20px;
 }
 
 .contact:hover .contactArrow {
