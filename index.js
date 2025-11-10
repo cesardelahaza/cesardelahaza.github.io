@@ -56,3 +56,4 @@ window.transitionToPage = function (href) {
         window.location.href = href
     }, 500)
 };
+
