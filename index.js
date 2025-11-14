@@ -30,6 +30,8 @@ function applyMode() {
         root.style.setProperty('--bg-color', 'var(--bg-color-dark)');
         root.style.setProperty('--text-color', 'var(--text-color-light)');
         root.style.setProperty('--icon-color', 'var(--text-color-light)');
+        root.style.setProperty('--inner-shadow', 'var(--light-shadow-color)');
+        root.style.setProperty('--outer-shadow', 'var(--dark-shadow-color)');
     } else {
         // Light mode
         // Icons
@@ -40,6 +42,8 @@ function applyMode() {
         root.style.setProperty('--bg-color', 'var(--bg-color-light)');
         root.style.setProperty('--text-color', 'var(--text-color-dark)');
         root.style.setProperty('--icon-color', 'var(--text-color-dark)');
+        root.style.setProperty('--inner-shadow', 'var(--dark-shadow-color)');
+        root.style.setProperty('--outer-shadow', 'var(--light-shadow-color)');
     }
 }
 
@@ -57,3 +61,13 @@ window.transitionToPage = function (href) {
     }, 500)
 };
 
+/* For slow scrolling in Resume section */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
