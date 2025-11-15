@@ -19,9 +19,9 @@
 
 html {
     /*font-family: 'Courier New', Courier, monospace;*/
-    font-size: 1rem;
+    font-size: calc((.2em + 0.5vmin) + (.2em + 0.5vmax));
     text-align: justify;
-    font-weight: 100;
+    hyphens: auto;
 }
 
 body {
@@ -75,7 +75,6 @@ nav {
         display: block;
         padding: 10px 0 10px 0;
         text-align: center;
-        font-size: 16px;
 
         ul li {
             list-style: none;
@@ -286,7 +285,7 @@ a.text-link {
 #extracurricular,
 #languages,
 #more {
-    padding: 20px;
+    padding: 2%;
     margin-top: 20px;
     backdrop-filter: blur(2px) saturate(180%);
     border: 1px solid var(--bg-color);
@@ -300,9 +299,9 @@ a.text-link {
 .project-content,
 .skills-content,
 .extracurricular-content {
-    margin: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
     border: 1px solid var(--bg-color);
     border-radius: 2rem;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
@@ -315,9 +314,6 @@ a.text-link {
 .project-content:hover,
 .skills-content:hover,
 .extracurricular-content:hover {
-    margin: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
     border: 1px solid var(--bg-color);
     border-radius: 2rem;
     box-shadow: 0 8px 60px var(--outer-shadow),
