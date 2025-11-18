@@ -24,7 +24,6 @@
         * https://cubic-bezier.com/#.17,.67,.83,.67
         * https://angrytools.com/css/animation/
         * https://gradienty.codes/animations
-        * 
 
 #### Set a language selector
 * [x] English

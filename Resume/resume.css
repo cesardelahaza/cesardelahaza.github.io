@@ -276,6 +276,11 @@ a.text-link {
     transition: 0.3s linear;
 }
 
+.container ul {
+    list-style-position: outside;
+    padding-left: 2%;
+}
+
 /* Boxes around each section */
 #summary,
 #education,
@@ -362,7 +367,8 @@ a.text-link {
 
 /* Skills*/
 
-#skills .sub-column-left, #skills .sub-column-right {
+#skills .sub-column-left,
+#skills .sub-column-right {
     width: 50%;
 }
 
