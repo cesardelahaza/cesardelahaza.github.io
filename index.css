@@ -24,7 +24,8 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: 1s;
-    padding: 1rem;
+    /* padding: 1rem; */
+    padding: 1%;
 }
 
 button {

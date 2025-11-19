@@ -52,3 +52,16 @@
 * ⏳ Add hover effect on index when screen is in their respective index name. For example, if I am in the Work & Experience section, I want that the index name is in bold and selected.
 * ⏸️ Links in Resume/Basic Information don't adjust to small screen widths. Make sure to change its format.
 * ⏸️ Start with some animations...
+
+#### Pending
+
+* ⤵️ Format the Resume Section
+* ⤵️ Add hover effect on index when screen is in their respective index name $\Rightarrow$ ⏸️
+
+### Tasks on Week 17 November, 2025
+
+* ✅ Format the Resume section
+* 🔄 Finish with ALL the information for the Resume section
+* Focus on those two tasks! Then:
+* Start with Blog.
+    - First entry: Blog from U.N.E.D.

@@ -28,7 +28,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: 1s;
-    padding: 1rem;
+    padding: 1%;
 }
 
 button {
@@ -325,6 +325,14 @@ a.text-link {
         inset 0 4px 10px var(--inner-shadow);
 }
 
+h4 {
+    margin-bottom: 0;
+}
+
+h5 {
+    margin-top: 0;
+}
+
 /* Resume - Summary */
 #summary tr td:nth-child(2) {
     padding: 5px;
@@ -362,8 +370,6 @@ a.text-link {
         margin: 1px;
     }
 }
-
-
 
 /* Skills*/
 
