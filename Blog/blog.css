@@ -5,12 +5,16 @@
     --text-color-dark: #303030;
     --blue-text-color: #3CA0E7;
     --dropdown-width: 100%;
+    --dark-shadow-color: rgba(31, 38, 135, 0.2);
+    --light-shadow-color: rgba(255, 255, 255, 0.3);
 
     /* Active variables */
     --bg-color: var(--bg-color-light);
     --text-color: var(--text-color-dark);
     --icon-color: var(--text-color-dark);
     --blue-color: var(--blue-text-color);
+    --inner-shadow: var(--dark-shadow-color);
+    --outer-shadow: var(--light-shadow-color);
 }
 
 html {
@@ -84,7 +88,7 @@ nav {
 
         li span {
             color: var(--text-color);
-        } 
+        }
 
         li:hover {
             color: var(--blue-color);
@@ -204,10 +208,102 @@ a.button:active {
     bottom: 0;
     z-index: 1;
 }
+
 /* ---------------------------------------------------------------- */
 
 a.text-link {
     color: var(--blue-color);
+}
+
+/*--------------*/
+/* Blog content */
+/*--------------*/
+
+/* Cards */
+@media (max-width: 798px) {
+    .cards {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 1285px) and (min-width: 798px) {
+    .cards {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    background: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    color: var(--text-color);
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card .date {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    /* background-color: color-mix(in srgb, var(--bg-color) 75%, transparent); */
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 2%;
+}
+
+.card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+.card-content {
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 1%;
+}
+
+.card .bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(4px) brightness(0.7);
+    transition: 0.4s ease;
+}
+
+.card:hover .bg-img {
+    filter: blur(0px) brightness(1);
+    transform: scale(1.05);
+    z-index: 0;
+}
+
+.card:hover {
+    color: #000;
+    background: rgba(255, 255, 255, 0.4);
 }
 
 /* ----------------------------------------------- */

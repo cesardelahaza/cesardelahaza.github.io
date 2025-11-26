@@ -53,15 +53,23 @@
 * ⏸️ Links in Resume/Basic Information don't adjust to small screen widths. Make sure to change its format.
 * ⏸️ Start with some animations...
 
-#### Pending
+##### Pending
 
 * ⤵️ Format the Resume Section
 * ⤵️ Add hover effect on index when screen is in their respective index name $\Rightarrow$ ⏸️
 
-### Tasks on Week 17 November, 2025
+### Tasks on Week 17 November, 2025
 
 * ✅ Format the Resume section
 * 🔄 Finish with ALL the information for the Resume section
-* Focus on those two tasks! Then:
-* Start with Blog.
+* ✅ Focus on those two tasks! Then:
+* ⤵️ Start with Blog.
     - First entry: Blog from U.N.E.D.
+
+### Tasks on Week 24 November, 2025
+
+* ⏸️ Do minor changes in Resume section
+* ⏸️ Review the About Me text
+* ⏳ Start with Blog:
+    - Decide and implement the layout
+    - Write blog about Physics Final Project (link to U.N.E.D.)
