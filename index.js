@@ -71,3 +71,67 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+/*====================================================*/
+/*===========This is for stars animation==============*/
+(function () {
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  document.body.appendChild(canvas);
+
+  canvas.style.position = "fixed";
+  canvas.style.top = 0;
+  canvas.style.left = 0;
+  canvas.style.zIndex = "-3";
+  canvas.style.pointerEvents = "none";
+
+  function resize() {
+    // Real size in pixels
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+  window.addEventListener("orientationchange", resize); // responsive
+
+  const numStars = 200;
+  const speed = 0.5;
+  let stars = [];
+
+  function createStar() {
+    return {
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      z: Math.random() * canvas.width,
+    };
+  }
+
+  for (let i = 0; i < numStars; i++) stars.push(createStar());
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let star of stars) {
+      star.z -= speed;
+      if (star.z <= 0) Object.assign(star, createStar());
+
+      const k = 200 / star.z;
+      const sx = star.x * k + canvas.width / 2 - (canvas.width / 2) * k;
+      const sy = star.y * k + canvas.height / 2 - (canvas.height / 2) * k;
+
+      const size = Math.max(0.5, 2 - star.z / 200);
+
+      
+      if (dark) {
+        ctx.fillStyle = "white";
+      } else {
+        ctx.fillStyle = "black";
+      }
+      ctx.fillRect(sx, sy, size, size);
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+})();

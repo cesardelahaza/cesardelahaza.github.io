@@ -29,7 +29,6 @@
 * [x] English
 * [o] Spanish
 
-
 #### Make sure to:
 * Include a responsive web design in all sections
 * Add links to "linkable things"
@@ -73,3 +72,20 @@
 * ⏳ Start with Blog:
     - Decide and implement the layout
     - Write blog about Physics Final Project (link to U.N.E.D.)
+* ⏸️ Adjust Dropdown menu from mobile users: seems a little deviated
+
+##### Pending
+
+* ⤵️ Do minor changes in Resume section
+* ⤵️ Review the About Me text
+* ⤵️ Write blog about Physics Final Project (link to U.N.E.D.)
+* ⤵️ Adjust Dropdown menu from mobile users
+
+### Tasks on Week 1 December, 2025
+
+* ✅ Do minor changes in Resume section
+    - ✅ Change some shadows... maybe it's better to see the page with less shadows
+    - ✅ Maybe add some animations in the background...
+* ✅ Review the About Me text
+* ⏸️ Write blog about Physics Final Project (link to U.N.E.D.)
+* ⏸️ Adjust Dropdown menu from mobile users
