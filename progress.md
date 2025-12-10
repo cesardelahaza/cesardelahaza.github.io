@@ -89,3 +89,15 @@
 * ✅ Review the About Me text
 * ⏸️ Write blog about Physics Final Project (link to U.N.E.D.)
 * ⏸️ Adjust Dropdown menu from mobile users
+
+##### Pending
+
+* ⤵️ Write blog about Physics Final Project (link to U.N.E.D.)
+* ⤵️ Adjust Dropdown menu from mobile users
+
+### Tasks on Week 8 December, 2025
+
+* ✅ Write blog about Physics Final Project (link to U.N.E.D.)
+* ✅ Upload new CV
+* ✅ Implement a loading system so .json is uploaded in the hmtl
+* ⏸️ Add WIP symbol or GIF into the Personal and Projects pages

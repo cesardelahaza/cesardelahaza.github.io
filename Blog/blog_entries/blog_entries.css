@@ -51,13 +51,12 @@ svg {
 
 a:link {
     text-decoration: none;
-    color: rgb(49, 49, 49);
-    transition: 2s;
+    color: var(--text-color);
 }
 
 a:visited {
     text-decoration: none;
-    color: rgb(49, 49, 49);
+    color: var(--text-color);
 }
 
 .nav-header {
@@ -217,89 +216,39 @@ a.text-link {
 }
 
 /*--------------*/
-/* Blog content */
+/* Blog entries */
 /*--------------*/
 
-/* Cards */
-@media (max-width: 798px) {
-    .cards {
-        grid-template-columns: 1fr !important;
-    }
+.entry-cover,
+.entry-text {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* suave, opcional */
 }
 
-@media (max-width: 1285px) and (min-width: 798px) {
-    .cards {
-        grid-template-columns: 1fr 1fr !important;
-    }
+.entry-cover,
+.entry-text {
+    align-items: center;
+    margin: 2% auto;
+    padding: 2%;
+    border-radius: 8px;
+    max-width: 800px;
 }
 
-.card-link {
-    text-decoration: none;
-    color: inherit;
+.entry-cover>*,
+.entry-text>* {
+    margin-left: auto;
+    margin-right: auto;
     display: block;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
-}
 
-.card {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    background: var(--bg-color);
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.card .date {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    font-size: 0.9rem;
-    background-color: var(--bg-color);
-    border-radius: 5px;
-    z-index: 1;
-    padding: 2%;
-}
-
-.card h2 {
-    margin: 0 0 0.5rem;
-    font-size: 1.4rem;
-}
-
-.card-content {
-    background-color: var(--bg-color);
-    border-radius: 0 0 10px 10px;
-    z-index: 1;
-    padding: 1%;
-    height: 100px;
-}
-
-.card .bg-img {
-    position: absolute;
-    inset: 0;
+.entry-text img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: blur(4px) brightness(0.7);
-    transition: 0.4s ease;
 }
 
-.card:hover .bg-img {
-    filter: blur(0px) brightness(1);
-    transform: scale(1.05);
-    z-index: 0;
+figcaption {
+    font-style: italic;
 }
-
 
 
 /* ----------------------------------------------- */
@@ -310,10 +259,18 @@ a.text-link {
         display: none;
     }
 
+    .entry-cover {
+        width: var(--desktop-width);
+    }
+
 }
 
 @media (max-width: 798px) {
     .nav-links {
         display: none;
+    }
+
+    .entry-cover {
+        width: var(--mobile-width);
     }
 }
