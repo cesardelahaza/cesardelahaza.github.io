@@ -242,11 +242,11 @@ a.text-link {
 
 .column-right {
     padding: 2%;
-    backdrop-filter: blur(2px) saturate(180%);
-    border: 1px solid var(--bg-color);
+    /* backdrop-filter: blur(2px) saturate(180%);*/
+    border: 1px solid var(--text-color);
     border-radius: 2rem;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
-        inset 0 4px 20px rgba(255, 255, 255, 0.3);
+    /*box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+        inset 0 4px 20px rgba(255, 255, 255, 0.3); */
 }
 
 
