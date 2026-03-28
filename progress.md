@@ -101,3 +101,7 @@
 * ✅ Upload new CV
 * ✅ Implement a loading system so .json is uploaded in the hmtl
 * ⏸️ Add WIP symbol or GIF into the Personal and Projects pages
+
+---
+
+# Update: Starting to use GitHub Projects

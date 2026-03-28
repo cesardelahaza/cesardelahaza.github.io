@@ -25,7 +25,7 @@
                 </summary>
                 <ul>
                     <li onclick="transitionToPage('../index.html')"><span>About me</span></li>
-                     <li onclick="transitionToPage('../Blog/blog.html')"><span>Blog</span></li>
+                    <li onclick="transitionToPage('../Blog/blog.html')"><span>Blog</span></li>
                     <li onclick="transitionToPage('../Personal/personal.html')"><span>Personal</span></li>
                     <li onclick="transitionToPage('projects.html')"><span>Projects</span></li>
                     <li onclick="transitionToPage('../Resume/resume.html')"><span>Resume</span></li>
@@ -57,9 +57,16 @@
             </button>
         </div>
     </header>
-    <h4>Under construction!</h4>
+    
+    <!--Bloch Sphere animation-->
+    <div id="bloch" style="position: fixed; top: 0; left: 0; z-index: 1; pointer-events: none;"></div>
+    <div id="labels" style="position: fixed; top: 0; left: 0; z-index: 1; pointer-events: none;">
+        <span class="axis-label" style="position: absolute; color:#ff6060" id="label-x">|X⟩</span>
+        <span class="axis-label" style="position: absolute; color:#60ff90" id="label-y">|Y⟩</span>
+        <span class="axis-label" style="position: absolute; color:#6090ff" id="label-z">|Z⟩</span>
+    </div>
+
+    <script type="module" src="../blochSphere.js"></script>
     <script src="../index.js"></script>
 </body>
-
-
 </html>
