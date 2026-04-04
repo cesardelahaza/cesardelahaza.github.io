@@ -58,8 +58,7 @@
         </div>
     </header>
     <div class="cards">
-        <a href="blog_entries/blog1.html"
-            class="card-link">
+        <a href="blog_entries/blog1.html" class="card-link">
             <article class="card">
                 <span class="date">10 Nov 2025</span>
                 <div class="card-content">
@@ -70,7 +69,15 @@
             </article>
         </a>
     </div>
+    <!--Bloch Sphere animation-->
+    <div id="bloch" style="position: fixed; top: 0; left: 0; z-index: 1; pointer-events: none;"></div>
+    <div id="labels" style="position: fixed; top: 0; left: 0; z-index: 1; pointer-events: none;">
+        <span class="axis-label" style="position: absolute; color:#ff6060" id="label-x">|X⟩</span>
+        <span class="axis-label" style="position: absolute; color:#60ff90" id="label-y">|Y⟩</span>
+        <span class="axis-label" style="position: absolute; color:#6090ff" id="label-z">|Z⟩</span>
+    </div>
 
+    <script type="module" src="../blochSphere.js"></script>
     <script src="../index.js"></script>
 </body>
 
