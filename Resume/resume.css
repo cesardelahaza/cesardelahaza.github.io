@@ -52,7 +52,6 @@ svg {
 a:link {
     text-decoration: none;
     color: var(--text-color);
-    ;
 }
 
 a:visited {
