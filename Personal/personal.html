@@ -3,70 +3,137 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="personal.css ">
-    <title>César - Personal</title>
-    <link rel="icon" type="image/svg" href="../img/quantum-sphere.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal · César de la Haza</title>
+    <meta name="description" content="The life outside work of César de la Haza: dogs, CrossFit, volunteering, origami and books.">
+    <link rel="icon" type="image/svg+xml" href="../img/quantum-sphere.svg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cesardelahaza.github.io/Personal/personal.html">
+    <meta property="og:title" content="Personal · César de la Haza">
+    <meta property="og:description" content="Dogs, CrossFit, volunteering and books.">
+    <meta property="og:image" content="https://cesardelahaza.github.io/img/profilePhoto.jpeg">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        try {
+            const t = localStorage.getItem('theme');
+            if (t) document.documentElement.dataset.theme = t;
+        } catch (e) { }
+    </script>
 </head>
 
 <body>
-
-    <header>
-        <div class="nav-header">
-            <details class="dropdown">
-                <summary role="button">
-                    <a class="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                        </svg>
-                    </a>
-                </summary>
-                <ul>
-                    <li onclick="transitionToPage('../index.html')"><span>About me</span></li>
-                    <li onclick="transitionToPage('../Blog/blog.html')"><span>Blog</span></li>
-                    <li onclick="transitionToPage('personal.html')"><span>Personal</span></li>
-                    <li onclick="transitionToPage('../Projects/projects.html')"><span>Projects</span></li>
-                    <li onclick="transitionToPage('../Resume/resume.html')"><span>Resume</span></li>
-                </ul>
-            </details>
-            <!--<details> obtained in https://codepen.io/AriTheElk/pen/XvgzKQ -->
-            <nav class="navBar">
-                <ul class="nav-links">
-                    <li onclick="transitionToPage('../index.html')"><span>About me</span></li>
-                    <li onclick="transitionToPage('../Blog/blog.html')"><span>Blog</span></li>
-                    <li onclick="transitionToPage('personal.html')"><span>Personal</span></li>
-                    <li onclick="transitionToPage('../Projects/projects.html')"><span>Projects</span></li>
-                    <li onclick="transitionToPage('../Resume/resume.html')"><span>Resume</span></li>
-                </ul>
-            </nav>
-            <button onclick="togglemode()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="dayIcon" class="bi bi-sun-fill"
-                    viewBox="0 0 16 16">
+    <header class="topbar">
+        <a href="../index.html" class="brand">César de la Haza</a>
+        <nav>
+            <a href="../index.html">About</a>
+            <a href="../Resume/resume.html">Resume</a>
+            <a href="personal.html" aria-current="page">Personal</a>
+            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+                <svg class="icon-moon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                    <path
+                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
                     <path
                         d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="nightIcon"
-                    class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
-                    <path
-                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
-                </svg>
             </button>
-        </div>
+        </nav>
     </header>
 
-    <!--Bloch Sphere animation-->
-    <div id="bloch" style="position: fixed; top: 0; left: 0; z-index: 1; pointer-events: none;"></div>
-    <div id="labels" style="position: fixed; top: 0; left: 0; z-index: 1; pointer-events: none;">
-        <span class="axis-label" style="position: absolute; color:#ff6060" id="label-x">|X⟩</span>
-        <span class="axis-label" style="position: absolute; color:#60ff90" id="label-y">|Y⟩</span>
-        <span class="axis-label" style="position: absolute; color:#6090ff" id="label-z">|Z⟩</span>
-    </div>
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">Off the clock</p>
+            <h1>The other half.</h1>
+            <p class="lead">
+                Not everything is Hamiltonians and train/test splits. This page is the part of my life that happens
+                away from the screen, and it will keep growing.
+            </p>
+        </section>
 
-    <script type="module" src="../blochSphere.js"></script>
-    <script src="../index.js"></script>
+        <!-- Dogs ----------------------------------------------------------------
+             To add a photo: resize it (about 1000px on the long side), put it in Personal/img/ and add an
+             <img> line to .ribbon-track. The strip loops by itself.
+        -->
+        <section id="dogs">
+            <h2>Jacky and the squad</h2>
+            <p>I love dogs, and animals in general. The squad: Jacky, Jobe and Chica.</p>
+        </section>
+        <div class="ribbon" aria-label="Photos of Jacky, Jobe and Chica">
+            <div class="ribbon-track">
+                    <img src="img/dogs-01.jpg" alt="Selfie with Jacky, tongue out">
+                    <img src="img/dogs-02.jpg" alt="Jacky wrapped in a blue blanket on the sofa">
+                    <img src="img/dogs-03.jpg" alt="Selfie on the sofa with Jobe in a grey jumper">
+                    <img src="img/dogs-04.jpg" alt="Jobe and Jacky asleep together under a yellow blanket">
+                    <img src="img/dogs-05.jpg" alt="Car selfie with Jacky in a purple coat">
+                    <img src="img/dogs-06.jpg" alt="Chica wrapped in a grey towel">
+                    <img src="img/dogs-07.jpg" alt="Lying on the sofa with Jacky resting on my shoulder">
+                    <img src="img/dogs-08.jpg" alt="Jobe sitting on the sofa next to me">
+                    <img src="img/dogs-09.jpg" alt="Jacky pulling a face from below">
+                    <img src="img/dogs-10.jpg" alt="Jacky with eyes closed, enjoying a scratch">
+                    <img src="img/dogs-11.jpg" alt="Jobe in the back seat of the car">
+                    <img src="img/dogs-12.jpg" alt="Sideways selfie with Jacky asleep on a cushion">
+            </div>
+        </div>
+
+        <!-- CrossFit clips -------------------------------------------------------
+             Short silent loops, played only while on screen. To add one: cut 3-8 s from the video with ffmpeg
+             (crop to 4:5, scale to 480px wide, H.264, no audio), save the clip and a one-frame poster .jpg in
+             Personal/img/, and add a <video> line to .clips.
+        -->
+        <section id="crossfit">
+            <h2>CrossFit</h2>
+            <p>I train CrossFit. Some moments from the box:</p>
+            <div class="clips">
+                <video src="img/crossfit-rings.mp4" poster="img/crossfit-rings.jpg" muted loop playsinline
+                    preload="none" aria-label="Video: swinging on the gymnastic rings"></video>
+                <video src="img/crossfit-snatch.mp4" poster="img/crossfit-snatch.jpg" muted loop playsinline
+                    preload="none" aria-label="Video: barbell snatch"></video>
+                <video src="img/crossfit-muscle-ups.mp4" poster="img/crossfit-muscle-ups.jpg" muted loop playsinline
+                    preload="none" aria-label="Video: gymnastics complex on the bar, starting with bar muscle-ups"></video>
+                <video src="img/crossfit-squat.mp4" poster="img/crossfit-squat.jpg" muted loop playsinline
+                    preload="none" aria-label="Video: front squats with the barbell"></video>
+                <video src="img/crossfit-barbell.mp4" poster="img/crossfit-barbell.jpg" muted loop playsinline
+                    preload="none" aria-label="Video: barbell overhead, then an overhead squat"></video>
+                <video src="img/crossfit-jerk.mp4" poster="img/crossfit-jerk.jpg" muted loop playsinline
+                    preload="none" aria-label="Video: barbell push jerks from the rack"></video>
+            </div>
+        </section>
+
+        <section id="volunteering">
+            <h2>Volunteering</h2>
+            <ul class="plain-list">
+                <li><strong>El Buen Amigo animal shelter.</strong> Weekly care for rescued dogs, plus adoption
+                    advertisements and awareness campaigns.</li>
+                <li><strong>Colectivo LGTB+ Pedro Zerolo</strong>, Faculty of Mathematics, University of Seville
+                    (2017 – 2019). Awareness campaigns and outreach activities.</li>
+            </ul>
+        </section>
+
+        <section id="also">
+            <h2>Also</h2>
+            <ul class="plain-list">
+                <li><strong>Origami.</strong> I used to fold tessellations. I don't fold much these days, but I still
+                    love it.</li>
+                <li><strong>Reading and writing.</strong></li>
+                <li><strong>Languages.</strong> Spanish is my native language, my English is C1, and French is a work
+                    in progress.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 César de la Haza · This site is a work in progress</p>
+    </footer>
+
+    <script src="../main.js"></script>
 </body>
+
 </html>
